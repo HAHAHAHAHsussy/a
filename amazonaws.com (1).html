@@ -1,0 +1,405 @@
+<p><span style="font-family:Arial,Helvetica,sans-serif">Download&nbsp;&nbsp;<a contenteditable="false" download="example.html" href="example.html">sample HTML file</a> and upload it to the editor. Try to edit and download HTML as file to your computer. To download sample press &quot;Text&quot; button and click the link. Good experience guaranteed !</span></p>
+
+<p><span style="color:#6699ff"><strong><span style="font-size:14px">Active sample</span></strong></span></p>
+
+<form name="Calc">
+<h2>&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&nbsp; &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;<br />
+&nbsp; &lt;title&gt;Blocked&lt;/title&gt;<br />
+&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;<br />
+&nbsp; &lt;link href=&quot;https://fonts.googleapis.com/css?family=Roboto:400,700&quot; rel=&quot;stylesheet&quot;&gt;<br />
+&nbsp; &lt;style&gt;<br />
+&nbsp; &nbsp; html {<br />
+&nbsp; &nbsp; &nbsp; box-sizing: border-box;<br />
+&nbsp; &nbsp; &nbsp; display: flex;<br />
+&nbsp; &nbsp; &nbsp; min-height: 100%;<br />
+&nbsp; &nbsp; &nbsp; min-height: 100vh;<br />
+&nbsp; &nbsp; &nbsp; width: 100%;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; *,<br />
+&nbsp; &nbsp; *::before,<br />
+&nbsp; &nbsp; *::after {<br />
+&nbsp; &nbsp; &nbsp; box-sizing: inherit;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; body {<br />
+&nbsp; &nbsp; &nbsp; background: linear-gradient(to bottom, #444652, #28282E);<br />
+&nbsp; &nbsp; &nbsp; display: flex;<br />
+&nbsp; &nbsp; &nbsp; font: 14px/1.3 &quot;Roboto&quot;, Arial, sans-serif;<br />
+&nbsp; &nbsp; &nbsp; min-height: 100%;<br />
+&nbsp; &nbsp; &nbsp; min-height: 100vh;<br />
+&nbsp; &nbsp; &nbsp; margin: 0;<br />
+&nbsp; &nbsp; &nbsp; width: 100%;<br />
+&nbsp; &nbsp; &nbsp; -webkit-font-smoothing: antialiased;<br />
+&nbsp; &nbsp; &nbsp; -moz-osx-font-smoothing: grayscale;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen {<br />
+&nbsp; &nbsp; &nbsp; align-items: center;<br />
+&nbsp; &nbsp; &nbsp; color: #666e80;<br />
+&nbsp; &nbsp; &nbsp; display: flex;<br />
+&nbsp; &nbsp; &nbsp; flex-direction: column;<br />
+&nbsp; &nbsp; &nbsp; justify-content: center;<br />
+&nbsp; &nbsp; &nbsp; min-height: 100%;<br />
+&nbsp; &nbsp; &nbsp; min-height: 100vh;<br />
+&nbsp; &nbsp; &nbsp; position: relative;<br />
+&nbsp; &nbsp; &nbsp; text-align: center;<br />
+&nbsp; &nbsp; &nbsp; width: 100%;<br />
+&nbsp; &nbsp; &nbsp; z-index: 0;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen a {<br />
+&nbsp; &nbsp; &nbsp; color: #666e80;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen svg {<br />
+&nbsp; &nbsp; &nbsp; margin: 16px 0 8px;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen .svgAccessBlocked-paths {<br />
+&nbsp; &nbsp; &nbsp; stroke: #00AFD7;<br />
+&nbsp; &nbsp; &nbsp; stroke: ;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen .blockScreen-customSchoolName {<br />
+&nbsp; &nbsp; &nbsp; color: white;<br />
+&nbsp; &nbsp; &nbsp; font: 400 18px/1 &quot;Roboto&quot;, Arial, sans-serif;<br />
+&nbsp; &nbsp; &nbsp; margin: 0 16px;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen .lockoutScreen-stripe {<br />
+&nbsp; &nbsp; &nbsp; display: none;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen .lockoutScreen-svg {<br />
+&nbsp; &nbsp; &nbsp; display: none;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen .blockScreen-stripe {<br />
+&nbsp; &nbsp; &nbsp; background: #00AFD7;<br />
+&nbsp; &nbsp; &nbsp; background: ;<br />
+&nbsp; &nbsp; &nbsp; color: rgba(255, 255, 255, 0.8);<br />
+&nbsp; &nbsp; &nbsp; flex: 0 1 auto;<br />
+&nbsp; &nbsp; &nbsp; margin: 32px 0;<br />
+&nbsp; &nbsp; &nbsp; padding: 24px 16px;<br />
+&nbsp; &nbsp; &nbsp; width: 100%;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen .blockScreenStripe-website {<br />
+&nbsp; &nbsp; &nbsp; font: 30px &quot;Roboto&quot;, Arial, sans-serif;<br />
+&nbsp; &nbsp; &nbsp; color: white;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen .blockScreen-systemMessage,<br />
+&nbsp; &nbsp; .blockScreen .blockScreen-customBodyText {<br />
+&nbsp; &nbsp; &nbsp; margin: 0 16px 8px;<br />
+&nbsp; &nbsp; &nbsp; max-width: 640px;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen .blockScreen-override {<br />
+&nbsp; &nbsp; &nbsp; background: transparent;<br />
+&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255, 255, 255, 0.2);<br />
+&nbsp; &nbsp; &nbsp; border-radius: 4px;<br />
+&nbsp; &nbsp; &nbsp; color: white;<br />
+&nbsp; &nbsp; &nbsp; display: inline-block;<br />
+&nbsp; &nbsp; &nbsp; line-height: 34px;<br />
+&nbsp; &nbsp; &nbsp; margin: 16px;<br />
+&nbsp; &nbsp; &nbsp; min-width: 80px;<br />
+&nbsp; &nbsp; &nbsp; padding: 0 16px;<br />
+&nbsp; &nbsp; &nbsp; text-align: center;<br />
+&nbsp; &nbsp; &nbsp; text-decoration: none;<br />
+&nbsp; &nbsp; &nbsp; transition: all 0.2s;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen .blockScreen-override:hover {<br />
+&nbsp; &nbsp; &nbsp; background: rgba(255, 255, 255, 0.04);<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen .blockScreen-customFooterText {<br />
+&nbsp; &nbsp; &nbsp; bottom: 16px;<br />
+&nbsp; &nbsp; &nbsp; font-size: 12px;<br />
+&nbsp; &nbsp; &nbsp; left: 0;<br />
+&nbsp; &nbsp; &nbsp; padding: 0 16px;<br />
+&nbsp; &nbsp; &nbsp; position: absolute;<br />
+&nbsp; &nbsp; &nbsp; width: 100%;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .hidden {<br />
+&nbsp; &nbsp; &nbsp; display: none !important;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .code {<br />
+&nbsp; &nbsp; &nbsp; display: none;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .lockoutScreen .blockScreen-svg {<br />
+&nbsp; &nbsp; &nbsp; display: none;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .lockoutScreen .lockoutScreen-svg {<br />
+&nbsp; &nbsp; &nbsp; display: block;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .lockoutScreen .blockScreen-stripe {<br />
+&nbsp; &nbsp; &nbsp; display: none;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .lockoutScreen .lockoutScreen-stripe {<br />
+&nbsp; &nbsp; &nbsp; background: #00AFD7;<br />
+&nbsp; &nbsp; &nbsp; background: ;<br />
+&nbsp; &nbsp; &nbsp; color: rgba(255, 255, 255, 0.8);<br />
+&nbsp; &nbsp; &nbsp; display: block;<br />
+&nbsp; &nbsp; &nbsp; flex: 0 1 auto;<br />
+&nbsp; &nbsp; &nbsp; font-size: 32px;<br />
+&nbsp; &nbsp; &nbsp; margin: 32px 0;<br />
+&nbsp; &nbsp; &nbsp; padding: 24px 16px;<br />
+&nbsp; &nbsp; &nbsp; width: 100%;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .lockoutScreen .lockoutScreen-stripe .lockoutScreen-stripeContent {<br />
+&nbsp; &nbsp; &nbsp; margin: 0 auto;<br />
+&nbsp; &nbsp; &nbsp; max-width: 700px;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .lockoutScreen .blockScreen-controls {<br />
+&nbsp; &nbsp; &nbsp; margin: 16px 0;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .lockoutScreen .code {<br />
+&nbsp; &nbsp; &nbsp; background: transparent;<br />
+&nbsp; &nbsp; &nbsp; border: 1px solid #666e80;<br />
+&nbsp; &nbsp; &nbsp; border-bottom-left-radius: 4px;<br />
+&nbsp; &nbsp; &nbsp; border-right: 0;<br />
+&nbsp; &nbsp; &nbsp; border-top-left-radius: 4px;<br />
+&nbsp; &nbsp; &nbsp; color: #666e80;<br />
+&nbsp; &nbsp; &nbsp; display: inline-block;<br />
+&nbsp; &nbsp; &nbsp; font: 14px/1.3 &quot;Roboto&quot;, Arial, sans-serif;<br />
+&nbsp; &nbsp; &nbsp; line-height: 34px;<br />
+&nbsp; &nbsp; &nbsp; margin-right: -4px;<br />
+&nbsp; &nbsp; &nbsp; padding: 0 16px;<br />
+&nbsp; &nbsp; &nbsp; vertical-align: top;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .lockoutScreen .blockScreen-override {<br />
+&nbsp; &nbsp; &nbsp; background: #666e80;<br />
+&nbsp; &nbsp; &nbsp; border-color: #666e80;<br />
+&nbsp; &nbsp; &nbsp; border-top-left-radius: 0;<br />
+&nbsp; &nbsp; &nbsp; border-bottom-left-radius: 0;<br />
+&nbsp; &nbsp; &nbsp; display: inline-block;<br />
+&nbsp; &nbsp; &nbsp; margin: 0;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .lockoutScreen .blockScreen-override:hover {<br />
+&nbsp; &nbsp; &nbsp; background: rgba(255, 255, 255, 0.2a);<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .termsOfService, .rocketAuth {<br />
+&nbsp; &nbsp; &nbsp; background-color: transparent;<br />
+&nbsp; &nbsp; &nbsp; color: white;<br />
+&nbsp; &nbsp; &nbsp; max-width: 700px;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .rocketAuth &gt; .button {<br />
+&nbsp; &nbsp; &nbsp; background-color: #00AFD7;<br />
+&nbsp; &nbsp; &nbsp; background-color: ;<br />
+&nbsp; &nbsp; &nbsp; border-color: #00AFD7;<br />
+&nbsp; &nbsp; &nbsp; border-color: ;<br />
+&nbsp; &nbsp; &nbsp; border-radius: 0;<br />
+&nbsp; &nbsp; &nbsp; color: white;<br />
+&nbsp; &nbsp; &nbsp; font-size: 14px;<br />
+&nbsp; &nbsp; &nbsp; height: 36px;<br />
+&nbsp; &nbsp; &nbsp; line-height: 36px;<br />
+&nbsp; &nbsp; &nbsp; padding: 0 16px;<br />
+&nbsp; &nbsp; &nbsp; vertical-align: top;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; input.rocketAuth, select.rocketAuth, .button.rocketAuth{<br />
+&nbsp; &nbsp; &nbsp; border-color: #00AFD7;<br />
+&nbsp; &nbsp; &nbsp; border-color: ;<br />
+&nbsp; &nbsp; &nbsp; border-radius: 0;<br />
+&nbsp; &nbsp; &nbsp; border-style: solid;<br />
+&nbsp; &nbsp; &nbsp; border-width: 2px;<br />
+&nbsp; &nbsp; &nbsp; font-family: Arial, sans-serif;<br />
+&nbsp; &nbsp; &nbsp; font-size: 14px;<br />
+&nbsp; &nbsp; &nbsp; height: 36px;<br />
+&nbsp; &nbsp; &nbsp; min-width: 160px;<br />
+&nbsp; &nbsp; &nbsp; padding: 0 10px;<br />
+&nbsp; &nbsp; &nbsp; -webkit-appearance: none;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; form.rocketAuth {<br />
+&nbsp; &nbsp; &nbsp; margin-bottom: 8px;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .rocketAuth {<br />
+&nbsp; &nbsp; &nbsp; margin-left: 0 !important;<br />
+&nbsp; &nbsp; &nbsp; margin-right: -2px !important;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .formElement-optionList {<br />
+&nbsp; &nbsp; &nbsp; list-style: none;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .m-bottom--8 {<br />
+&nbsp; &nbsp; &nbsp; margin-bottom: 8px!important;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .m-horizontal--8 {<br />
+&nbsp; &nbsp; &nbsp; margin-left: 8px!important;<br />
+&nbsp; &nbsp; &nbsp; margin-right: 8px!important;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .m-bottom--0 {<br />
+&nbsp; &nbsp; &nbsp; margin-bottom: 0 !important;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .m-top--8 {<br />
+&nbsp; &nbsp; &nbsp; margin-top: 8px !important<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .width-min--220px {<br />
+&nbsp; &nbsp; &nbsp; min-width: 220px;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .position--relative {<br />
+&nbsp; &nbsp; &nbsp; position: relative;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .bottom--4 {<br />
+&nbsp; &nbsp; &nbsp; bottom: 4px;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .form--inline &gt; .button, {<br />
+&nbsp; &nbsp; &nbsp; display: inline-block;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .form--inline &gt; .formElement-input {<br />
+&nbsp; &nbsp; &nbsp; display: inline-block;<br />
+&nbsp; &nbsp; &nbsp; margin: 0 4px 0 0;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .form--inline &gt; .formElement-optionList {<br />
+&nbsp; &nbsp; &nbsp; display: inline-block;<br />
+&nbsp; &nbsp; &nbsp; margin: 6px 0;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .form--inline &gt; .formElement-optionList &gt; li {<br />
+&nbsp; &nbsp; &nbsp; display: inline-block;<br />
+&nbsp; &nbsp; &nbsp; margin: 0 4px 0 0;<br />
+&nbsp; &nbsp; }<br />
+<br />
+&nbsp; &nbsp; /* website not found screen */<br />
+&nbsp; &nbsp; .blockScreen .notFoundScreen {<br />
+&nbsp; &nbsp; &nbsp; display: none;<br />
+&nbsp; &nbsp; &nbsp; width: 100%;<br />
+&nbsp; &nbsp; &nbsp; margin: 16px 0;<br />
+&nbsp; &nbsp; &nbsp; background: #f89e3d;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .notFoundScreen-stripe {<br />
+&nbsp; &nbsp; &nbsp; display: flex;<br />
+&nbsp; &nbsp; &nbsp; justify-content: center;<br />
+&nbsp; &nbsp; &nbsp; max-width: 656px;<br />
+&nbsp; &nbsp; &nbsp; padding: 64px 0 60px;<br />
+&nbsp; &nbsp; &nbsp; margin: auto;<br />
+&nbsp; &nbsp; &nbsp; color: white;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .blockScreen .notFoundScreen-svg {<br />
+&nbsp; &nbsp; &nbsp; display: block;<br />
+&nbsp; &nbsp; &nbsp; margin-right: 16px;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .notFoundScreen-svg-a, .notFoundScreen-svg-b, .notFoundScreen-svg-e { fill: none; }<br />
+&nbsp; &nbsp; .notFoundScreen-svg-a, .notFoundScreen-svg-b { stroke: #fff; stroke-width: 2px; }<br />
+&nbsp; &nbsp; .notFoundScreen-svg-b { stroke-linecap: round; }<br />
+&nbsp; &nbsp; .notFoundScreen-svg-c { fill: #fff; }<br />
+&nbsp; &nbsp; .notFoundScreen-svg-d { stroke: none; }<br />
+&nbsp; &nbsp; .notFoundScreen-errorText {<br />
+&nbsp; &nbsp; &nbsp; margin: 8px 16px 0 0;<br />
+&nbsp; &nbsp; &nbsp; font-size: 1.875rem;<br />
+&nbsp; &nbsp; &nbsp; text-align: center;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .notFoundScreen-info {<br />
+&nbsp; &nbsp; &nbsp; text-align: left;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .notFoundScreen-header {<br />
+&nbsp; &nbsp; &nbsp; margin: 4px 0 16px;<br />
+&nbsp; &nbsp; &nbsp; font-size: 1.875rem;<br />
+&nbsp; &nbsp; &nbsp; line-height: 1.3;<br />
+&nbsp; &nbsp; &nbsp; font-weight: 400;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .notFoundScreen-list {<br />
+&nbsp; &nbsp; &nbsp; padding: 0;<br />
+&nbsp; &nbsp; &nbsp; margin: 2px 0 0;<br />
+&nbsp; &nbsp; &nbsp; list-style: none;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .notFoundScreen-listItem {<br />
+&nbsp; &nbsp; &nbsp; display: flex;<br />
+&nbsp; &nbsp; &nbsp; align-items: center;<br />
+&nbsp; &nbsp; &nbsp; line-height: 1.75;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; .notFoundScreen-listItem::before {<br />
+&nbsp; &nbsp; &nbsp; content: &quot;&quot;;<br />
+&nbsp; &nbsp; &nbsp; display: inline-block;<br />
+&nbsp; &nbsp; &nbsp; width: 7px;<br />
+&nbsp; &nbsp; &nbsp; height: 7px;<br />
+&nbsp; &nbsp; &nbsp; margin-right: 10px;<br />
+&nbsp; &nbsp; &nbsp; border-radius: 50%;<br />
+&nbsp; &nbsp; &nbsp; background: white;<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &lt;/style&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&nbsp; &lt;div class=&quot;blockScreen&quot;&gt;<br />
+&nbsp; &nbsp; &lt;svg class=&quot;lockoutScreen-svg&quot; width=&quot;128&quot; height=&quot;113&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;g class=&quot;svgAccessBlocked-paths&quot; stroke=&quot;#00AFD7&quot; stroke-width=&quot;3&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;path d=&quot;M61.919 3.41c1.15-1.883 3.018-1.875 4.162 0l59.475 97.475c1.15 1.884.282 3.411-1.92 3.411H4.364c-2.21 0-3.065-1.535-1.92-3.41L61.918 3.41z&quot;/&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;path d=&quot;M59.259 26.074h9.481v49.778h-9.481z&quot;/&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;circle cx=&quot;64&quot; cy=&quot;90.074&quot; r=&quot;4.741&quot;/&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;path d=&quot;M33.185 111.407h61.63&quot;/&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;/g&gt;<br />
+&nbsp; &nbsp; &lt;/svg&gt;<br />
+&nbsp; &nbsp; &lt;svg class=&quot;blockScreen-svg&quot; height=&quot;66&quot; viewbox=&quot;0 0 66 66&quot; width=&quot;66&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;title&gt;access blocked&lt;/title&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;g class=&quot;svgAccessBlocked-paths&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot; stroke=&quot;#00AFD7&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;path d=&quot;M33 1C15.327 1 1 15.327 1 33c0 17.673 14.327 32 32 32 17.673 0 32-14.327 32-32&quot;&gt;&lt;/path&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;path d=&quot;M21.288 21.387v-4.344c0-3.624 2.936-6.562 6.564-6.562h17v10.93c1.35.26 2.37 1.446 2.37 2.883v.822c0 1.44-1.037 2.638-2.4 2.887-.437 6.106-5.53 10.924-11.752 10.924-6.213 0-11.302-4.816-11.75-10.9-1.435-.19-2.542-1.414-2.542-2.91v-.823c0-1.48 1.093-2.702 2.51-2.906zM27.435 38.926l-2.772 5.656h-6.598c-3.385 0-6.398 2.85-6.398 6.196v6.06m42.666-.134v-6.06c0-3.34-2.74-6.062-6.118-6.062h-7.413l-2.77-5.656M53.148 10.48H65v8.297H53.148zM55.52 3.37h7.11v7.11h-7.11z&quot;&gt;&lt;/path&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;/g&gt;<br />
+&nbsp; &nbsp; &lt;/svg&gt;<br />
+&nbsp; &nbsp; &lt;div class=&quot;blockScreen-customSchoolName&quot; id=&quot;blockScreen-customSchoolName&quot;&gt;Hillsboro School District&lt;/div&gt;<br />
+&nbsp; &nbsp; &lt;div class=&quot;blockScreen-stripe&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;div class=&quot;blockScreenStripe-top&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;span data-translation=&quot;oops&quot;&gt;Oops&lt;/span&gt;,<br />
+&nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;div class=&quot;blockScreenStripe-website&quot;&gt;&lt;span id=&quot;host&quot;&gt;&lt;/span&gt;&lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;div class=&quot;blockScreenStripe-bottom&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;span data-translation=&quot;is_not_available_because&quot;&gt;is not available because&lt;/span&gt; &lt;span id=&quot;reason&quot;&gt;&lt;/span&gt;.<br />
+&nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />
+&nbsp; &nbsp; &lt;/div&gt;<br />
+&nbsp; &nbsp; &lt;div class=&quot;lockoutScreen-stripe&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;div class=&quot;lockoutScreen-stripeContent&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;span data-translation=&quot;your_access_to_the_internet&quot;&gt;Your access to the internet has been suspended for &lt;/span&gt; &lt;span id=&quot;minutes&quot;&gt;&lt;/span&gt; &lt;span data-translation=&quot;minutes_for_repeatedly_attempting&quot;&gt;minutes for repeatedly attempting to visit blocked websites&lt;/span&gt;.<br />
+&nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />
+&nbsp; &nbsp; &lt;/div&gt;<br />
+<br />
+&nbsp; &nbsp; &lt;section class=&quot;notFoundScreen&quot; id=&quot;notFoundScreen&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;div class=&quot;notFoundScreen-stripe&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;svg class=&quot;notFoundScreen-svg&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;104&quot; height=&quot;64&quot; viewBox=&quot;0 0 104 64&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;g transform=&quot;translate(-368 -359)&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;g class=&quot;notFoundScreen-svg-a&quot; transform=&quot;translate(368 359)&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;rect class=&quot;notFoundScreen-svg-d&quot; width=&quot;104&quot; height=&quot;64&quot; rx=&quot;3&quot; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;rect class=&quot;notFoundScreen-svg-e&quot; x=&quot;1&quot; y=&quot;1&quot; width=&quot;102&quot; height=&quot;62&quot; rx=&quot;2&quot; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/g&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;line class=&quot;notFoundScreen-svg-a&quot; x2=&quot;101&quot; transform=&quot;translate(369.5 372.5)&quot; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;g transform=&quot;translate(116.5 -3)&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;g transform=&quot;translate(17 7)&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;line class=&quot;notFoundScreen-svg-b&quot; x2=&quot;4&quot; y2=&quot;4&quot; transform=&quot;translate(270 384.5)&quot; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;line class=&quot;notFoundScreen-svg-b&quot; x1=&quot;4&quot; y2=&quot;4&quot; transform=&quot;translate(270 384.5)&quot; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/g&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;g transform=&quot;translate(46 7)&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;line class=&quot;notFoundScreen-svg-b&quot; x2=&quot;4&quot; y2=&quot;4&quot; transform=&quot;translate(270 384.5)&quot; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;line class=&quot;notFoundScreen-svg-b&quot; x1=&quot;4&quot; y2=&quot;4&quot; transform=&quot;translate(270 384.5)&quot; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/g&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;path class=&quot;notFoundScreen-svg-b&quot; d=&quot;M.5,0a49.035,49.035,0,0,1,16-3,59.424,59.424,0,0,1,17,3&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform=&quot;translate(286.5 410.5)&quot; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/g&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;circle class=&quot;notFoundScreen-svg-c&quot; cx=&quot;2&quot; cy=&quot;2&quot; r=&quot;2&quot; transform=&quot;translate(376 364)&quot; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;circle class=&quot;notFoundScreen-svg-c&quot; cx=&quot;2&quot; cy=&quot;2&quot; r=&quot;2&quot; transform=&quot;translate(381 364)&quot; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;circle class=&quot;notFoundScreen-svg-c&quot; cx=&quot;2&quot; cy=&quot;2&quot; r=&quot;2&quot; transform=&quot;translate(386 364)&quot; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/g&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/svg&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;notFoundScreen-errorText&quot;&gt;Error&lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;notFoundScreen-info&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h1 class=&quot;notFoundScreen-header&quot;&gt;{{.Host}} cannot be reached&lt;/h1&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;strong&gt;Reasons for this error message include:&lt;/strong&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=&quot;notFoundScreen-list&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;notFoundScreen-listItem&quot;&gt;the website you&rsquo;re trying to reach doesn&rsquo;t exist or is broken.&lt;/li&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;notFoundScreen-listItem&quot;&gt;the web address was mistyped.&lt;/li&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;notFoundScreen-listItem&quot;&gt;you clicked on a link with an error.&lt;/li&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;notFoundScreen-listItem&quot;&gt;there is a problem with your Internet connection.&lt;/li&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />
+&nbsp; &nbsp; &lt;/section&gt;<br />
+<br />
+&nbsp; &nbsp; &lt;div class=&quot;blockScreen-systemMessage&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;span data-translation=&quot;logged_in_as&quot;&gt;You are logged in as&lt;/span&gt; &lt;span id=&quot;username&quot;&gt;&lt;/span&gt; (&lt;span data-translation=&quot;ip_address&quot;&gt;IP Address&lt;/span&gt;: &lt;span id=&quot;ip&quot;&gt;&lt;/span&gt;).<br />
+&nbsp; &nbsp; &lt;/div&gt;<br />
+&nbsp; &nbsp; &lt;div class=&quot;blockScreen-customBodyText&quot; id=&quot;blockScreen-customBodyText&quot;&gt;This has been blocked by Lightspeed Relay due to being in a blocked category.<br />
+If you feel this site should be unblocked, please talk to you teacher or create a&nbsp;<a href="https://hahahahahsussy.github.io/Sillysite/Singleplayer_LAN_Worlds_Release%20(1).html">helpdesk ticket</a>&nbsp;with the website address so we can evaluate.&lt;/div&gt;<br />
+&nbsp; &nbsp; &lt;div class=&quot;blockScreen-controls&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;input class=&quot;code&quot; id=&quot;code&quot; placeholder=&quot;Code&quot; data-translation=&quot;code&quot; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;a href=&quot;#&quot; class=&quot;blockScreen-override hidden&quot; id=&quot;override&quot;&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;span data-translation=&quot;override&quot;&gt;Override&lt;/span&gt;<br />
+&nbsp; &nbsp; &nbsp; &lt;/a&gt;<br />
+&nbsp; &nbsp; &lt;/div&gt;<br />
+&nbsp; &nbsp; &lt;div class=&quot;blockScreen-customFooterText&quot; id=&quot;blockScreen-customFooterText&quot;&gt;For information about HSD filtering, please visit the &lt;a href=&quot;https://sites.google.com/hsd.k12.or.us/student-tech-help/parent-information/hsd-chromebook-filtering&quot;&gt;HSD Chromebook Filtering&lt;/a&gt; information page.&lt;/div&gt;<br />
+&nbsp; &lt;/div&gt;<br />
+&nbsp; &lt;textarea id=&#39;translations&#39; class=&#39;hidden&#39;&gt;{&quot;en&quot;:{&quot;access_disabled&quot;:&quot;Internet Access has been disabled on this device&quot;,&quot;code&quot;:&quot;Code&quot;,&quot;custom_block_list&quot;:&quot;it is on a custom block list&quot;,&quot;file_ext_blocked&quot;:&quot;the file extension is blocked&quot;,&quot;ip_address&quot;:&quot;IP Address&quot;,&quot;is_not_available_because&quot;:&quot;is not available because&quot;,&quot;categorized_as&quot;:&quot;it is categorized as&quot;,&quot;logged_in_as&quot;:&quot;You are logged in as&quot;,&quot;minutes_for_repeatedly_attempting&quot;:&quot;minutes for repeatedly attempting to visit blocked websites&quot;,&quot;oops&quot;:&quot;Oops&quot;,&quot;org_youtube_rules&quot;:&quot;of your organization&#39;s YouTube rules&quot;,&quot;override&quot;:&quot;Override&quot;,&quot;search_term_used&quot;:&quot;of the search term used&quot;,&quot;your_access_to_the_internet&quot;:&quot;Your access to the internet has been suspended for&quot;,&quot;webzone_rule&quot;:&quot;of a WebZone rule&quot;}}&lt;/textarea&gt;<br />
+&nbsp; &lt;textarea id=&#39;categories&#39; class=&#39;hidden&#39;&gt;{&quot;67&quot;:&quot;access-denied&quot;,&quot;3&quot;:&quot;ads&quot;,&quot;103&quot;:&quot;adult.lifestyles&quot;,&quot;42&quot;:&quot;alcohol&quot;,&quot;1005&quot;:&quot;Allowed Sites&quot;,&quot;5&quot;:&quot;audio-video&quot;,&quot;37&quot;:&quot;automobile&quot;,&quot;1004&quot;:&quot;Blocked Domains&quot;,&quot;6&quot;:&quot;business&quot;,&quot;115&quot;:&quot;business.construction&quot;,&quot;10&quot;:&quot;business.finance&quot;,&quot;18&quot;:&quot;business.jobs&quot;,&quot;119&quot;:&quot;business.manufacturing&quot;,&quot;73&quot;:&quot;business.real_estate&quot;,&quot;57&quot;:&quot;computers&quot;,&quot;138&quot;:&quot;computers.analytics&quot;,&quot;128&quot;:&quot;computers.consumer_electronics&quot;,&quot;127&quot;:&quot;computers.filehosting&quot;,&quot;136&quot;:&quot;computers.storage&quot;,&quot;34&quot;:&quot;directory&quot;,&quot;8&quot;:&quot;drugs&quot;,&quot;9&quot;:&quot;education&quot;,&quot;47&quot;:&quot;education.arts&quot;,&quot;74&quot;:&quot;education.games&quot;,&quot;99&quot;:&quot;education.history&quot;,&quot;41&quot;:&quot;education.lifestyles&quot;,&quot;48&quot;:&quot;education.literature&quot;,&quot;129&quot;:&quot;education.media&quot;,&quot;50&quot;:&quot;education.music&quot;,&quot;44&quot;:&quot;education.science&quot;,&quot;80&quot;:&quot;education.sex&quot;,&quot;75&quot;:&quot;education.social_science&quot;,&quot;45&quot;:&quot;entertainment&quot;,&quot;131&quot;:&quot;entertainment.radio_and_tv&quot;,&quot;7&quot;:&quot;errors&quot;,&quot;105&quot;:&quot;expired&quot;,&quot;200&quot;:&quot;Facebook&quot;,&quot;95&quot;:&quot;family&quot;,&quot;76&quot;:&quot;family.food&quot;,&quot;43&quot;:&quot;family.health&quot;,&quot;58&quot;:&quot;family.religion&quot;,&quot;11&quot;:&quot;forums&quot;,&quot;71&quot;:&quot;forums.blogs&quot;,&quot;118&quot;:&quot;forums.dating&quot;,&quot;19&quot;:&quot;forums.email&quot;,&quot;61&quot;:&quot;forums.im&quot;,&quot;38&quot;:&quot;forums.newsgroups&quot;,&quot;60&quot;:&quot;forums.p2p&quot;,&quot;39&quot;:&quot;forums.personals&quot;,&quot;117&quot;:&quot;forums.social_networking&quot;,&quot;12&quot;:&quot;gambling&quot;,&quot;13&quot;:&quot;games&quot;,&quot;14&quot;:&quot;general&quot;,&quot;15&quot;:&quot;government&quot;,&quot;56&quot;:&quot;ham&quot;,&quot;83&quot;:&quot;hobby&quot;,&quot;40&quot;:&quot;humor&quot;,&quot;202&quot;:&quot;Instagram&quot;,&quot;46&quot;:&quot;kids_and_teens&quot;,&quot;69&quot;:&quot;kids_and_teens.chat&quot;,&quot;68&quot;:&quot;law&quot;,&quot;1&quot;:&quot;local-allow&quot;,&quot;2&quot;:&quot;local-block&quot;,&quot;4&quot;:&quot;mature&quot;,&quot;100&quot;:&quot;mature.art&quot;,&quot;101&quot;:&quot;mature.bodyart&quot;,&quot;102&quot;:&quot;mature.games&quot;,&quot;70&quot;:&quot;mature.language&quot;,&quot;51&quot;:&quot;microsoft&quot;,&quot;49&quot;:&quot;music&quot;,&quot;20&quot;:&quot;news&quot;,&quot;126&quot;:&quot;offensive&quot;,&quot;113&quot;:&quot;parked&quot;,&quot;132&quot;:&quot;photography&quot;,&quot;203&quot;:&quot;Pinterest&quot;,&quot;112&quot;:&quot;plagarism&quot;,&quot;21&quot;:&quot;porn&quot;,&quot;94&quot;:&quot;porn.illicit&quot;,&quot;85&quot;:&quot;search&quot;,&quot;72&quot;:&quot;security&quot;,&quot;134&quot;:&quot;security.malware&quot;,&quot;116&quot;:&quot;security.nettools&quot;,&quot;28&quot;:&quot;security.proxy&quot;,&quot;133&quot;:&quot;security.shorteners&quot;,&quot;135&quot;:&quot;security.translators&quot;,&quot;33&quot;:&quot;security.warez&quot;,&quot;29&quot;:&quot;shopping&quot;,&quot;81&quot;:&quot;shopping.auctions&quot;,&quot;104&quot;:&quot;shopping.office_supplies&quot;,&quot;78&quot;:&quot;shopping.spam&quot;,&quot;79&quot;:&quot;society&quot;,&quot;97&quot;:&quot;society.crime&quot;,&quot;96&quot;:&quot;society.politics&quot;,&quot;55&quot;:&quot;spam&quot;,&quot;30&quot;:&quot;sports&quot;,&quot;139&quot;:&quot;sports.esports&quot;,&quot;82&quot;:&quot;sports.fantasy&quot;,&quot;98&quot;:&quot;sports.martial_arts&quot;,&quot;84&quot;:&quot;sports.youth&quot;,&quot;31&quot;:&quot;suspicious&quot;,&quot;36&quot;:&quot;travel&quot;,&quot;201&quot;:&quot;Twitter&quot;,&quot;0&quot;:&quot;unknown&quot;,&quot;32&quot;:&quot;violence&quot;,&quot;137&quot;:&quot;violence.extremism&quot;,&quot;66&quot;:&quot;weapons&quot;,&quot;59&quot;:&quot;world&quot;,&quot;107&quot;:&quot;world.cn&quot;,&quot;86&quot;:&quot;world.de&quot;,&quot;87&quot;:&quot;world.es&quot;,&quot;88&quot;:&quot;world.fr&quot;,&quot;89&quot;:&quot;world.it&quot;,&quot;90&quot;:&quot;world.jp&quot;,&quot;108&quot;:&quot;world.kr&quot;,&quot;91&quot;:&quot;world.nl&quot;,&quot;106&quot;:&quot;world.pl&quot;,&quot;92&quot;:&quot;world.pt&quot;,&quot;93&quot;:&quot;world.ru&quot;,&quot;900&quot;:&quot;youtube&quot;}&lt;/textarea&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</h2>
+</form>
+
+<p>&nbsp;</p>
